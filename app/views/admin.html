@@ -1,0 +1,99 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+#{menu id:"admin"/}
+
+<div class="content box">
+  <h1 class="title">
+    All Known Readings in the Database:
+  </h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Temperature</th>
+      <th>Wind Speed</th>
+      <th>Wind Direction</th>
+      <th>Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:readings, as:'reading'}
+    <tr>
+      <td>
+        ${reading.id}
+      </td>
+      <td>
+        ${reading.temp}
+      </td>
+      <td>
+        ${reading.windSpeed}
+      </td>
+      <td>
+        ${reading.windDirection}
+      </td>
+      <td>
+        ${reading.pressure}
+      </td>
+    </tr>
+    #{/list}
+    </tbody>
+  </table>
+  <h1 class="title">
+    All Known Stations in the Database:
+  </h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Location</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:stations, as:'station'}
+    <tr>
+      <td>
+        ${station.id}
+      </td>
+      <td>
+        ${station.location}
+      </td>
+      <td>
+        ${station.longitude}
+      </td>
+      <td>
+        ${station.latitude}
+      </td>
+    </tr>
+    #{/list}
+    </tbody>
+  </table>
+  <h1 class="title">
+    All Known Members in the Database:
+  </h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:members, as:'member'}
+    <tr>
+      <td>
+        ${member.id}
+      </td>
+      <td>
+        ${member.firstname}
+      </td>
+      <td>
+        ${member.lastname}
+      </td>
+    </tr>
+    #{/list}
+    </tbody>
+  </table>
+</div>

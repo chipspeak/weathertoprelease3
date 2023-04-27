@@ -1,0 +1,60 @@
+
+Reading(r1):
+  code: 100
+  temp: 21.0
+  windSpeed: 3.5
+  windDirection: 220
+  pressure: 1000
+
+Reading(r2):
+  code: 200
+  temp: 1.5
+  windSpeed: 2
+  windDirection: 200
+  pressure: 999
+
+Reading(r3):
+  code: 300
+  temp: 15.0
+  windSpeed: 6.8
+  windDirection: 90
+  pressure: 1000
+
+Reading(r4):
+  code: 400
+  temp: 5.0
+  windSpeed: 1.8
+  windDirection: 120
+  pressure: 1002
+
+Station(s1):
+  location: Tramore
+  longitude: -7.152
+  latitude: 52.160
+  readings:
+    - r1
+    - r2
+
+Station(s2):
+  location: Dunmore
+  longitude: -6.994
+  latitude: 52.149
+  readings:
+    - r3
+    - r4
+
+  Member(m1):
+    firstname: john
+    lastname: doe
+    email: johndo@email.com
+    password: secret
+
+  Member(m2):
+    firstname: jane
+    lastname: doe
+    email: janedoe@email.com
+    password: secret
+
+
+
+
