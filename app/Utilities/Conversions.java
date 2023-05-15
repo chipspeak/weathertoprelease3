@@ -33,6 +33,38 @@ public class Conversions {
         return  weatherCondition;
     }
 
+    public static String weatherVisual(int code) {
+            String weatherIcon = "/public/images/white/whitesunshine.png";
+            switch (code) {
+                case 100:
+                    weatherIcon = "/public/images/white/whitesunshine.png";
+                    break;
+                case 200:
+                    weatherIcon = "/public/images/white/whitepartialcloudy.png";
+                    break;
+                case 300:
+                    weatherIcon = "/public/images/white/whitecloud.png";
+                    break;
+                case 400:
+                    weatherIcon = "/public/images/white/whiterain.png";
+                    break;
+                case 500:
+                    weatherIcon = "/public/images/white/whiteheavyshowers.png";
+                    break;
+                case 600:
+                    weatherIcon = "/public/images/white/whiterain.png";
+                    break;
+                case 700:
+                    weatherIcon = "/public/images/white/whitesnowfall.png";
+                    break;
+                case 800:
+                    weatherIcon = "/public/images/white/whitethunder.png";
+                    break;
+            }
+            return  weatherIcon;
+        }
+
+
     public static double tempConversion (double temp) {
         return temp*9/5 + 32;
     }

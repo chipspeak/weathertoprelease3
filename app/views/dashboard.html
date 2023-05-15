@@ -7,12 +7,21 @@
   <h1 class="title">
     ${station.location}
   </h1>
-  <a href="/stations/${station.id}" class="icon has-text-info is-medium">
-    <i class="fas fa-folder"></i>
-  </a>
-  <a href="/dashboard/deleteStation/${station.id}" class="icon has-text-danger">
-    <i class="fas fa-trash"></i>
-  </a>
+  <div class="content box">
+    #{listlatestreadings station:station /}
+  </div>
+  <div class="columns">
+    <div class="column is-7 is-offset-2">
+      <a href="/stations/${station.id}" class="icon has-text-info is-medium">
+        <i class="fas fa-2x fa-folder"></i>
+      </a>
+    </div>
+    <div class="column is-4">
+      <a href="/dashboard/deleteStation/${station.id}" class="icon has-text-danger">
+        <i class="fas fa-2x fa-trash"></i>
+      </a>
+    </div>
+  </div>
 </div>
 #{/list}
 #{addStation /}

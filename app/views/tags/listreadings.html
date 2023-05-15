@@ -1,7 +1,7 @@
 <table class="table is-bordered">
   <div class="columns">
       <div class="column is-2 is-offset-1">
-        <div class="card has-background-black">
+        <div class="card has-background-black" style="height: 300px;">
           <header class="card-header">
             <p class="card-header-title has-text-white has-text-centered">
               Station
@@ -32,7 +32,7 @@
           </header>
           <div class="card-image">
             <figure class="image is-medium">
-              <img src="/public/images/white/whiteweather.png" alt="weather">
+              <img src="${_station.listLatestReading().icon()}">
             </figure>
           </div>
           <br>
@@ -110,11 +110,11 @@
           </div>
           <br>
           <p class="card-text has-text-white has-text-centered">
-            ${_station.listLatestReading().getPressure()} hpa
+            ${_station.listLatestReading().getPressure()} hPa
             <br>
-            Min: ${_station.minPressure()} hpa
+            Min: ${_station.minPressure()} hPa
             <br>
-            Max: ${_station.maxPressure()} hpa
+            Max: ${_station.maxPressure()} hPa
           </p>
           <br>
         </div>
@@ -148,7 +148,7 @@
             ${reading.getWindDirection()}°
           </td>
           <td>
-            ${reading.getPressure()} atm
+            ${reading.getPressure()} hPa
           </td>
           <td>
           <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="button is-center is-danger has-text-weight-bold">Delete</a>
