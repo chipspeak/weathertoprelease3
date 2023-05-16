@@ -12,9 +12,9 @@ public class StationControl extends Controller {
         render("station.html", station);
     }
 
-    public static void addReading(long id, int code, double temp, double windSpeed, int windDirection, int pressure)
+    public static void addReading(long id, int code, double temp, double windSpeed, int windDirection, int pressure, String date)
     {
-        Reading reading = new Reading(code, temp, windSpeed, windDirection, pressure);
+        Reading reading = new Reading(code, temp, windSpeed, windDirection, pressure, date);
         Station station = Station.findById(id);
         station.readings.add(reading);
         station.save();

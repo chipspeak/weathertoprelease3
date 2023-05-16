@@ -1,7 +1,7 @@
 <table class="table is-bordered">
   <div class="columns">
       <div class="column is-2 is-offset-1">
-        <div class="card has-background-black" style="height: 300px;">
+        <div class="card has-background-black">
           <header class="card-header">
             <p class="card-header-title has-text-white has-text-centered">
               Station
@@ -15,6 +15,7 @@
           <br>
           <p class="card-text has-text-white has-text-centered">
             ${_station.location}
+            <br>
             <br>
             ${_station.longitude} Longitude
             <br>
@@ -60,9 +61,13 @@
             <br>
             ${_station.listLatestReading().fahrenheit()}° Fahrenheit
             <br>
+            <br>
             Min temp: ${_station.minTemp()}°
             <br>
             Max temp: ${_station.maxTemp()}°
+            <br>
+            <br>
+            <i class="${_station.tempTrend()}"></i>
           </p>
           <br>
         </div>
@@ -92,6 +97,9 @@
             Min speed: ${_station.minWind()} km/hr
             <br>
             Max speed: ${_station.maxWind()} km/hr
+            <br>
+            <br>
+            <i class="${_station.windTrend()}"></i>
           </p>
           <br>
         </div>
@@ -112,9 +120,13 @@
           <p class="card-text has-text-white has-text-centered">
             ${_station.listLatestReading().getPressure()} hPa
             <br>
+            <br>
             Min: ${_station.minPressure()} hPa
             <br>
             Max: ${_station.maxPressure()} hPa
+            <br>
+            <br>
+            <i class="${_station.pressureTrend()}"></i>
           </p>
           <br>
         </div>
@@ -123,6 +135,7 @@
     <table class="table is-bordered is-hoverable is-size-5">
       <tbody>
         <tr>
+          <th>Date/Time</th>
           <th>Code</th>
           <th>Temperature</th>
           <th>Wind Speed</th>
@@ -132,6 +145,9 @@
         </tr>
         #{list items:_station.readings, as:'reading'}
         <tr>
+          <td>
+            ${reading.getDate()}
+          </td>
           <td>
             ${reading.getCode()}
           </td>

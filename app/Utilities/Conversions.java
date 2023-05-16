@@ -216,22 +216,4 @@ public class Conversions {
         }
         else return " ";
     }
-
-
-
-//    public static void tempReadingsHelper() { //method containing a simple loop for use in the addReading view
-//        for(int i = 0; i < 40; i++) {
-//            for (int j = 0; j < 10; j++) {
-//                System.out.println("<option value=" + i +"." + j +">" + i +"." + j + "° Celsius</option>");
-//            }
-//        }
-//    }
-//
-//    public static void windDirectionHelper() {
-//        for (int i = 0; i < 360; i++) {
-//            for (int j = 0; j < 10; j++) {
-//                System.out.println("<option value=" + i + "." + j + ">" + i + "." + j + "° Celsius</option>");
-//            }
-//        }
-//    }
 }

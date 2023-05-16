@@ -13,14 +13,16 @@ public class Reading extends Model
     public int pressure;
     public double windChill;
     public double windDirection;
+    public String date;
 
 
-    public Reading(int code, double temp, double windSpeed, double windDirection, int pressure) {
+    public Reading(int code, double temp, double windSpeed, double windDirection, int pressure, String date) {
         this.code = code;
         this.temp = temp;
         this.windSpeed = windSpeed;
         this.windDirection = windDirection;
         this.pressure = pressure;
+        this.date = date;
     }
 
     public double fahrenheit() {
@@ -81,5 +83,10 @@ public class Reading extends Model
         this.pressure = pressure;
     }
 
-
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

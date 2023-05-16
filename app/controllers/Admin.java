@@ -13,6 +13,5 @@ public class Admin extends Controller
         List<Station> stations = Station.findAll();
         List<Member> members = Member.findAll();
         render ("admin.html", readings, stations, members);
-
     }
 }

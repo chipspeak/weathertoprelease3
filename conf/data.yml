@@ -1,5 +1,6 @@
 
 Reading(r1):
+  date: 2023-05-10T23:52
   code: 100
   temp: 21.0
   windSpeed: 3.5
@@ -7,6 +8,7 @@ Reading(r1):
   pressure: 1000
 
 Reading(r2):
+  date: 2023-05-11T23:52
   code: 200
   temp: 1.5
   windSpeed: 2
@@ -14,6 +16,7 @@ Reading(r2):
   pressure: 999
 
 Reading(r3):
+  date: 2023-05-12T23:52
   code: 300
   temp: 15.0
   windSpeed: 6.8
@@ -21,6 +24,7 @@ Reading(r3):
   pressure: 1000
 
 Reading(r4):
+  date: 2023-05-13T23:52
   code: 400
   temp: 5.0
   windSpeed: 1.8
@@ -46,7 +50,7 @@ Station(s2):
   Member(m1):
     firstname: john
     lastname: doe
-    email: johndo@email.com
+    email: johndoe@email.com
     password: secret
 
   Member(m2):

@@ -62,10 +62,64 @@ public class Station extends Model
             return latestReading;
         }
         else {
-            Reading latestReading = new Reading(0, 0, 0, 0, 0);
+            Reading latestReading = new Reading(0, 0, 0, 0, 0, null);
             return latestReading;
         }
     }
+
+    public String tempTrend() {
+        String tempTrendText = "fas fa-2x fa-arrows-h";
+        if (readings.size() != 0 && readings.size() > 2) {
+            Reading tempTrend1 = readings.get(readings.size() - 1);
+            Reading tempTrend2 = readings.get(readings.size() - 2);
+            Reading tempTrend3 = readings.get(readings.size() - 3);
+            if ((tempTrend1.getTemp() > tempTrend2.getTemp() && (tempTrend2.getTemp() > tempTrend3.getTemp()))) {
+                tempTrendText = "fas fa-2x fa-arrow-up";
+            }
+            if ((tempTrend1.getTemp() < tempTrend2.getTemp() && (tempTrend2.getTemp() < tempTrend3.getTemp()))) {
+                tempTrendText = "fas fa-2x fa-arrow-down";
+            }
+        }
+        else { tempTrendText = "fas fa-2x fa-arrows-h";}
+        return tempTrendText;
+    }
+
+    public String pressureTrend() {
+        String pressureTrendText = "fas fa-2x fa-arrows-h";
+        if (readings.size() != 0 && readings.size() > 2) {
+            Reading pressureTrend1 = readings.get(readings.size() - 1);
+            Reading pressureTrend2 = readings.get(readings.size() - 2);
+            Reading pressureTrend3 = readings.get(readings.size() - 3);
+            if ((pressureTrend1.getPressure() > pressureTrend2.getPressure() && (pressureTrend2.getPressure() > pressureTrend3.getPressure()))) {
+                pressureTrendText = "fas fa-2x fa-arrow-up";
+            }
+            if ((pressureTrend1.getPressure() < pressureTrend2.getPressure() && (pressureTrend2.getPressure() < pressureTrend3.getPressure()))) {
+                pressureTrendText = "fas fa-2x fa-arrow-down";
+            }
+        }
+        else { pressureTrendText = "fas fa-2x fa-arrows-h";}
+        return pressureTrendText;
+    }
+
+    public String windTrend() {
+        String windTrendText = "fas fa-2x fa-arrows-h";
+        if (readings.size() != 0 && readings.size() > 2) {
+            Reading windTrend1 = readings.get(readings.size() - 1);
+            Reading windTrend2 = readings.get(readings.size() - 2);
+            Reading windTrend3 = readings.get(readings.size() - 3);
+            if ((windTrend1.getTemp() > windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() > windTrend3.getWindSpeed()))) {
+                windTrendText = "fas fa-2x fa-arrow-up";
+            }
+            if ((windTrend1.getWindSpeed() < windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() < windTrend3.getWindSpeed()))) {
+                windTrendText = "fas fa-2x fa-arrow-down";
+            }
+        }
+        else { windTrendText = "fas fa-2x fa-arrows-h";}
+        return windTrendText;
+    }
+
+
+
 
     public double minTemp() {
         if (readings.size() != 0) {
