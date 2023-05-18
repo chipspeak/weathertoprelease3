@@ -15,6 +15,10 @@ GET     /dashboard                              Dashboard.index
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
 
+POST    /edit                                   Accounts.edit
+GET     /profile                                Accounts.editProfile
+
+
 GET     /stations/{id}                          StationControl.index
 POST    /dashboard/addStation                   Dashboard.addStation
 GET     /dashboard/deleteStation/{id}           Dashboard.deleteStation

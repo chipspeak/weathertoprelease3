@@ -51,7 +51,7 @@ Station(s2):
     firstname: john
     lastname: doe
     email: johndoe@email.com
-    password: secret
+    password: 0
     stations:
       -s1
       -s2

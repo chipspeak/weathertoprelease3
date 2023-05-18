@@ -1,31 +1,39 @@
 package controllers;
-
 import models.Member;
 import play.Logger;
 import play.mvc.Controller;
 
 public class Accounts extends Controller
 {
-    public static void signup()
-    {
+    public static void signup() {
         render("signup.html");
     }
 
-    public static void login()
-    {
+    public static void login() {
         render("login.html");
     }
 
-    public static void register(String firstname, String lastname, String email, String password)
-    {
+    public static void editProfile() {
+        render("profile.html");
+    }
+
+    public static void register(String firstname, String lastname, String email, String password) {
         Logger.info("Registering new user " + email);
         Member member = new Member(firstname, lastname, email, password);
         member.save();
         redirect("/login");
     }
 
-    public static void authenticate(String email, String password)
-    {
+    public void edit(String firstname, String lastname, String password) {
+        Logger.info("Updating user info");
+        getLoggedInMember().setFirstname(firstname);
+        getLoggedInMember().setLastname(lastname);
+        getLoggedInMember().setPassword(password);
+        getLoggedInMember().save();
+        redirect("/dashboard");
+    }
+
+    public static void authenticate(String email, String password) {
         Logger.info("Attempting to authenticate with " + email + ":" + password);
 
         Member member = Member.findByEmail(email);
@@ -39,14 +47,12 @@ public class Accounts extends Controller
         }
     }
 
-    public static void logout()
-    {
+    public static void logout() {
         session.clear();
         redirect ("/");
     }
 
-    public static Member getLoggedInMember()
-    {
+    public static Member getLoggedInMember() {
         Member member = null;
         if (session.contains("logged_in_Memberid")) {
             String memberId = session.get("logged_in_Memberid");
