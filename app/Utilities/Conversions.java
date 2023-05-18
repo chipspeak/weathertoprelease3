@@ -34,34 +34,51 @@ public class Conversions {
     }
 
     public static String weatherVisual(int code) {
-            String weatherIcon = "/public/images/white/whitesunshine.png";
+            String weatherIcon = "fa-sun";
             switch (code) {
                 case 100:
-                    weatherIcon = "/public/images/white/whitesunshine.png";
+                    weatherIcon = "fa-sun";
                     break;
                 case 200:
-                    weatherIcon = "/public/images/white/whitepartialcloudy.png";
+                    weatherIcon = "fa-cloud-sun";
                     break;
                 case 300:
-                    weatherIcon = "/public/images/white/whitecloud.png";
+                    weatherIcon = "fa-cloud";
                     break;
                 case 400:
-                    weatherIcon = "/public/images/white/whiterain.png";
+                    weatherIcon = "fa-cloud-sun-rain";
                     break;
                 case 500:
-                    weatherIcon = "/public/images/white/whiteheavyshowers.png";
+                    weatherIcon = "fa-cloud-rain";
                     break;
                 case 600:
-                    weatherIcon = "/public/images/white/whiterain.png";
+                    weatherIcon = "fa-cloud-heavy-showers";
                     break;
                 case 700:
-                    weatherIcon = "/public/images/white/whitesnowfall.png";
+                    weatherIcon = "fa-snowflake";
                     break;
                 case 800:
-                    weatherIcon = "/public/images/white/whitethunder.png";
+                    weatherIcon = "fa-cloud-bolt";
                     break;
             }
             return  weatherIcon;
+        }
+
+        public static String tempVisual(double temp) {
+            String tempIcon = "fa-solid fa-temperature-empty";
+            if (temp <= 10) {
+                tempIcon = "fa-solid fa-temperature-empty";
+            }
+            if (temp >= 11 && temp < 20) {
+                tempIcon = "fa-solid fa-temperature-half";
+            }
+            if (temp >=21 && temp < 25) {
+                tempIcon = "fa-solid fa-temperature-three-quarters";
+            }
+            if (temp > 25) {
+                tempIcon = "fa-solid fa-temperature-full";
+            }
+            return tempIcon;
         }
 
 

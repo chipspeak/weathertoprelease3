@@ -1,11 +1,7 @@
 package controllers;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import models.Member;
 import models.Station;
-import models.Reading;
 import play.Logger;
 import play.mvc.Controller;
 
@@ -31,7 +27,7 @@ import play.mvc.Controller;
 
     public static void addStation (String location, float longitude, float latitude)
     {
-      Logger.info("Adding a Playlist");
+      Logger.info("Adding a Station");
       Member member = Accounts.getLoggedInMember();
       Station station = new Station(location, longitude, latitude);
       member.stations.add(station);

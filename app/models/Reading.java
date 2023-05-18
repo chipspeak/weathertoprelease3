@@ -33,7 +33,9 @@ public class Reading extends Model
         return Conversions.weatherDisplay(this.code);
     }
 
-    public String icon() { return Conversions.weatherVisual(this.code);}
+    public String weatherIcon() { return Conversions.weatherVisual(this.code);}
+
+    public String tempIcon() { return Conversions.tempVisual(this.temp);}
 
     public int beauforts() {
         return Conversions.beaufortConversion(this.windSpeed);

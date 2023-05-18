@@ -25,7 +25,7 @@ public class StationControl extends Controller {
     {
         Station station = Station.findById(id);
         Reading reading = Reading.findById(readingid);
-//        Logger.info ("Removing" + reading.title);
+        Logger.info ("Removing reading");
         station.readings.remove(reading);
         station.save();
         reading.delete();

@@ -6,6 +6,9 @@
   <h1 class="title">
     ${station.location}
   </h1>
+  #{listlatestreadings station:station /}
+</div>
+<div class="content box">
   #{listreadings station:station /}
   <br>
   #{addReading station:station /}

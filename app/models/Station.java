@@ -1,14 +1,11 @@
 package models;
 import play.db.jpa.Model;
-import Utilities.Conversions;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Comparator;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import controllers.StationControl;
-import play.db.jpa.Model;
 
 @Entity
 public class Station extends Model {
@@ -56,6 +53,7 @@ public class Station extends Model {
         this.readings = readings;
     }
 
+
     public Reading listLatestReading() {
         if (readings.size()>0) {
             Reading latestReading = readings.get(readings.size() - 1);
@@ -66,6 +64,7 @@ public class Station extends Model {
             return latestReading;
         }
     }
+
     public static List<Station> sortStations(List<Station> station) {
         station.sort(Comparator.comparing(Station::getLocation, String.CASE_INSENSITIVE_ORDER));
         return station;
@@ -78,13 +77,13 @@ public class Station extends Model {
             Reading tempTrend2 = readings.get(readings.size() - 2);
             Reading tempTrend3 = readings.get(readings.size() - 3);
             if ((tempTrend1.getTemp() > tempTrend2.getTemp() && (tempTrend2.getTemp() > tempTrend3.getTemp()))) {
-                tempTrendText = "fas fa-2x fa-arrow-up";
+                tempTrendText = "fas fa-2x fa-arrow-up fa-beat";
             }
             if ((tempTrend1.getTemp() < tempTrend2.getTemp() && (tempTrend2.getTemp() < tempTrend3.getTemp()))) {
-                tempTrendText = "fas fa-2x fa-arrow-down";
+                tempTrendText = "fas fa-2x fa-arrow-down fa-beat";
             }
         }
-        else { tempTrendText = "fas fa-2x fa-arrows-h";}
+        else { tempTrendText = "fas fa-2x fa-beat fa-arrows-h";}
         return tempTrendText;
     }
 
@@ -95,10 +94,10 @@ public class Station extends Model {
             Reading pressureTrend2 = readings.get(readings.size() - 2);
             Reading pressureTrend3 = readings.get(readings.size() - 3);
             if ((pressureTrend1.getPressure() > pressureTrend2.getPressure() && (pressureTrend2.getPressure() > pressureTrend3.getPressure()))) {
-                pressureTrendText = "fas fa-2x fa-arrow-up";
+                pressureTrendText = "fas fa-2x fa-arrow-up fa-beat";
             }
             if ((pressureTrend1.getPressure() < pressureTrend2.getPressure() && (pressureTrend2.getPressure() < pressureTrend3.getPressure()))) {
-                pressureTrendText = "fas fa-2x fa-arrow-down";
+                pressureTrendText = "fas fa-2x fa-arrow-down fa-beat";
             }
         }
         else { pressureTrendText = "fas fa-2x fa-arrows-h";}
@@ -111,19 +110,16 @@ public class Station extends Model {
             Reading windTrend1 = readings.get(readings.size() - 1);
             Reading windTrend2 = readings.get(readings.size() - 2);
             Reading windTrend3 = readings.get(readings.size() - 3);
-            if ((windTrend1.getTemp() > windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() > windTrend3.getWindSpeed()))) {
-                windTrendText = "fas fa-2x fa-arrow-up";
+            if ((windTrend1.getWindSpeed() > windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() > windTrend3.getWindSpeed()))) {
+                windTrendText = "fas fa-2x fa-arrow-up fa-beat";
             }
             if ((windTrend1.getWindSpeed() < windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() < windTrend3.getWindSpeed()))) {
-                windTrendText = "fas fa-2x fa-arrow-down";
+                windTrendText = "fas fa-2x fa-arrow-down fa-beat";
             }
         }
         else { windTrendText = "fas fa-2x fa-arrows-h";}
         return windTrendText;
     }
-
-
-
 
     public double minTemp() {
         if (readings.size() != 0) {
@@ -168,11 +164,11 @@ public class Station extends Model {
         if (readings.size() != 0) {
             Reading maxWind = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.getTemp() > maxWind.getTemp()) {
+                if (reading.getWindSpeed() > maxWind.getWindSpeed()) {
                     maxWind = reading;
                 }
             }
-            return maxWind.getTemp();
+            return maxWind.getWindSpeed();
         } else
             return 0;
     }
@@ -202,9 +198,4 @@ public class Station extends Model {
         } else
             return 0;
     }
-
-
-
-
-
 }
