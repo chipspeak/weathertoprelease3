@@ -3,6 +3,7 @@ import play.db.jpa.Model;
 import Utilities.Conversions;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -10,8 +11,7 @@ import controllers.StationControl;
 import play.db.jpa.Model;
 
 @Entity
-public class Station extends Model
-{
+public class Station extends Model {
     public String location;
     public float longitude;
     public float latitude;
@@ -65,6 +65,10 @@ public class Station extends Model
             Reading latestReading = new Reading(0, 0, 0, 0, 0, null);
             return latestReading;
         }
+    }
+    public static List<Station> sortStations(List<Station> station) {
+        station.sort(Comparator.comparing(Station::getLocation, String.CASE_INSENSITIVE_ORDER));
+        return station;
     }
 
     public String tempTrend() {

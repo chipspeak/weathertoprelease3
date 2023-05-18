@@ -52,12 +52,10 @@ Station(s2):
     lastname: doe
     email: johndoe@email.com
     password: secret
+    stations:
+      -s1
+      -s2
 
-  Member(m2):
-    firstname: jane
-    lastname: doe
-    email: janedoe@email.com
-    password: secret
 
 
 

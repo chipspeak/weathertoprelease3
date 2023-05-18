@@ -14,7 +14,7 @@ import play.mvc.Controller;
     {
       Logger.info("Rendering Dasboard");
       Member member = Accounts.getLoggedInMember();
-      List<Station> stations = member.stations;
+      List<Station> stations = Station.sortStations(member.stations);
       render ("dashboard.html", stations);
     }
 
