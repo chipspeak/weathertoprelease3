@@ -1,4 +1,3 @@
-
 Reading(r1):
   date: 2023-05-10T23:52
   code: 100
@@ -47,14 +46,14 @@ Station(s2):
     - r3
     - r4
 
-  Member(m1):
-    firstname: john
-    lastname: doe
-    email: johndoe@email.com
-    password: 0
-    stations:
-      -s1
-      -s2
+Member(m1):
+  firstname: john
+  lastname: doe
+  email: johndoe@email.com
+  password: 0
+  stations:
+    - s1
+    - s2
 
 
 

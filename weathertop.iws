@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="End of initial run of changes May 19th. Large number of aesthetic changes including adding multiple icons, changing login/signup/profile page images, improving the cards by adding footers and more. Am committing this version before I redeploy it." />
+    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="End of initial run of changes May 19th. Large number of aesthetic changes including adding multiple icons, changing login/signup/profile page images, improving the cards by adding footers and more. Am committing this version before I redeploy it.">
+      <change beforePath="$PROJECT_DIR$/app/views/tags/listlatestreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tags/listlatestreadings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_listlatestreadings.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_tags_listlatestreadings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_conf_data.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weathertop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weathertop.iws" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +130,7 @@
       <workItem from="1684413789546" duration="52000" />
       <workItem from="1684413851427" duration="590000" />
       <workItem from="1684414457558" duration="27128000" />
-      <workItem from="1684486964969" duration="20136000" />
+      <workItem from="1684486964969" duration="23774000" />
     </task>
     <task id="LOCAL-00001" summary="Adjustments made after study group may 15th">
       <created>1684192978194</created>

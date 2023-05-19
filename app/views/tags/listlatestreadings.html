@@ -14,8 +14,8 @@
           ${_station.location}
         </p>
         <footer class="card-footer">
-          <p class="card-footer-item has-text-white">${_station.longitude} Longitude</p>
-          <p class="card-footer-item has-text-white">${_station.latitude} Latitude</p>
+          <p class="card-footer-item has-text-white mb-0">${_station.longitude} Longitude</p>
+          <p class="card-footer-item has-text-white mb-0">${_station.latitude} Latitude</p>
         </footer>
       </div>
     </div>
@@ -31,9 +31,14 @@
             <i class="${_station.listLatestReading().weatherIcon()} fas fa-regular has-text-white fa-beat fa-6x " style="--fa-animation-duration: 7s;"></i>
           </figure>
         </div>
-        <p class="card-text has-text-white has-text-centered pt-6 pb-6">
-          ${_station.listLatestReading().conditions()}
+        <p class="card-text has-text-white has-text-centered mt-6">
+          Latest conditions
         </p>
+        <footer class="card-footer has-text-white has-text-centered">
+          <p class="card-footer-item">
+            ${_station.listLatestReading().conditions()}
+          </p>
+        </footer>
       </div>
     </div>
     <div class="column is-2">
@@ -54,9 +59,9 @@
           ${_station.listLatestReading().fahrenheit()}° Fahrenheit
         </p>
         <footer class="card-footer has-text-white">
-          <p class="card-footer-item">Min: ${_station.minTemp()}°</p>
-          <p class="card-footer-item">Max: ${_station.maxTemp()}°</p>
-          <i class="card-footer-item mt-3 ${_station.tempTrend()}" style="--fa-animation-duration: 5s;"></i>
+          <p class="card-footer-item mb-0">Min: ${_station.minTemp()}°</p>
+          <p class="card-footer-item mb-0">Max: ${_station.maxTemp()}°</p>
+          <i class="card-footer-item mt-2 ${_station.tempTrend()}" style="--fa-animation-duration: 5s;"></i>
         </footer>
       </div>
     </div>
@@ -82,8 +87,8 @@
           ${_station.listLatestReading().windDirectionReading()}
         </p>
         <footer class="card-footer has-text-white">
-          <p class="card-footer-item">Min: ${_station.minWind()} km/h</p>
-          <p class="card-footer-item">Max: ${_station.maxWind()} km/h</p>
+          <p class="card-footer-item mb-0">Min: ${_station.minWind()} km/h</p>
+          <p class="card-footer-item mb-0">Max: ${_station.maxWind()} km/h</p>
           <i class="card-footer-item mt-5 mr-5 ${_station.windTrend()}" style="--fa-animation-duration: 5s;"></i>
         </footer>
       </div>
@@ -100,12 +105,12 @@
             <i class="fa-brands fa-cloudscale fa-light has-text-white fa-beat fa-8x " style="--fa-animation-duration: 10s;"></i>
           </figure>
         </div>
-        <p class="card-text has-text-white has-text-centered mt-3 pt-5 pb-6">
+        <p class="card-text has-text-white has-text-centered mt-3 pt-5">
           ${_station.listLatestReading().getPressure()} hPa
         </p>
         <footer class="card-footer has-text-white">
-          <p class="card-footer-item">Min: ${_station.minPressure()} hPa</p>
-          <p class="card-footer-item">Max: ${_station.maxPressure()} hPa</p>
+          <p class="card-footer-item mb-0">Min: ${_station.minPressure()} hPa</p>
+          <p class="card-footer-item mb-0">Max: ${_station.maxPressure()} hPa</p>
           <i class="card-footer-item mt-5 ${_station.pressureTrend()}" style="--fa-animation-duration: 5s;"></i>
         </footer>
       </div>
