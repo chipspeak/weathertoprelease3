@@ -33,6 +33,11 @@ public class Accounts extends Controller
         redirect("/dashboard");
     }
 
+    public void deleteProfile() {
+        getLoggedInMember().delete();
+        redirect("/signup");
+    }
+
     public static void authenticate(String email, String password) {
         Logger.info("Attempting to authenticate with " + email + ":" + password);
 

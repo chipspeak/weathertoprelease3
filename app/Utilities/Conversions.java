@@ -52,7 +52,7 @@ public class Conversions {
                     weatherIcon = "fa-cloud-rain";
                     break;
                 case 600:
-                    weatherIcon = "fa-cloud-heavy-showers";
+                    weatherIcon = "fa-cloud-showers-heavy";
                     break;
                 case 700:
                     weatherIcon = "fa-snowflake";
