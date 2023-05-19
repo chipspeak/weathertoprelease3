@@ -77,13 +77,13 @@ public class Station extends Model {
             Reading tempTrend2 = readings.get(readings.size() - 2);
             Reading tempTrend3 = readings.get(readings.size() - 3);
             if ((tempTrend1.getTemp() > tempTrend2.getTemp() && (tempTrend2.getTemp() > tempTrend3.getTemp()))) {
-                tempTrendText = "fas fa-2x fa-arrow-up fa-beat";
+                tempTrendText = "fas fa-2x fa-arrow-trend-up fa-beat";
             }
             if ((tempTrend1.getTemp() < tempTrend2.getTemp() && (tempTrend2.getTemp() < tempTrend3.getTemp()))) {
-                tempTrendText = "fas fa-2x fa-arrow-down fa-beat";
+                tempTrendText = "fas fa-2x fa-arrow-trend-down fa-beat";
             }
         }
-        else { tempTrendText = "fas fa-2x fa-beat fa-arrows-h";}
+        else { tempTrendText = "fas fa-2x fa-arrows-h";}
         return tempTrendText;
     }
 
@@ -94,10 +94,10 @@ public class Station extends Model {
             Reading pressureTrend2 = readings.get(readings.size() - 2);
             Reading pressureTrend3 = readings.get(readings.size() - 3);
             if ((pressureTrend1.getPressure() > pressureTrend2.getPressure() && (pressureTrend2.getPressure() > pressureTrend3.getPressure()))) {
-                pressureTrendText = "fas fa-2x fa-arrow-up fa-beat";
+                pressureTrendText = "fas fa-2x fa-arrow-trend-up fa-beat";
             }
             if ((pressureTrend1.getPressure() < pressureTrend2.getPressure() && (pressureTrend2.getPressure() < pressureTrend3.getPressure()))) {
-                pressureTrendText = "fas fa-2x fa-arrow-down fa-beat";
+                pressureTrendText = "fas fa-2x fa-arrow-trend-down fa-beat";
             }
         }
         else { pressureTrendText = "fas fa-2x fa-arrows-h";}
@@ -111,10 +111,10 @@ public class Station extends Model {
             Reading windTrend2 = readings.get(readings.size() - 2);
             Reading windTrend3 = readings.get(readings.size() - 3);
             if ((windTrend1.getWindSpeed() > windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() > windTrend3.getWindSpeed()))) {
-                windTrendText = "fas fa-2x fa-arrow-up fa-beat";
+                windTrendText = "fas fa-2x fa-arrow-trend-up fa-beat";
             }
             if ((windTrend1.getWindSpeed() < windTrend2.getWindSpeed() && (windTrend2.getWindSpeed() < windTrend3.getWindSpeed()))) {
-                windTrendText = "fas fa-2x fa-arrow-down fa-beat";
+                windTrendText = "fas fa-2x fa-arrow-trend-down fa-beat";
             }
         }
         else { windTrendText = "fas fa-2x fa-arrows-h";}

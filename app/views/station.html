@@ -3,9 +3,11 @@
 #{menu id:"dashboard"/}
 
 <div class="content box">
-  <h1 class="title">
-    ${station.location}
-  </h1>
+  <div class="pb-6">
+    <button class="button is-large is-light">
+      ${station.location}<i class="fa-solid fa-satellite-dish pl-2"></i>
+    </button>
+  </div>
   #{listlatestreadings station:station /}
 </div>
 <div class="content box">
