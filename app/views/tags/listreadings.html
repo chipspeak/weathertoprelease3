@@ -1,33 +1,34 @@
 <table class="table is-striped is-hoverable is-size-5">
   <tbody>
   #{readingheadings /}
-    #{list items:_station.readings, as:'reading'}
-    <tr>
-      <td>
-        ${reading.getDate()}
-      </td>
-      <td>
-        ${reading.getCode()}
-      </td>
-      <td>
-        ${reading.getTemp()}° C
-       <br>
-        ${reading.fahrenheit()}° F
-        <br>
-      </td>
-      <td>
-        ${reading.getWindSpeed()} km/hr
-      </td>
-      <td>
-        ${reading.getWindDirection()}°
-      </td>
-      <td>
-        ${reading.getPressure()} hPa
-      </td>
-      <td>
-        <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="button is-danger is-center"><i class="fa-solid fa-square-xmark"></i></a>
-      </td>
-    </tr>
-    #{/list}
+  #{list items:_station.readings, as:'reading'}
+  <tr>
+    <td>
+      ${reading.getDate()}
+    </td>
+    <td>
+      ${reading.getCode()}
+    </td>
+    <td>
+      ${reading.getTemp()}° C
+      <br>
+      ${reading.fahrenheit()}° F
+      <br>
+    </td>
+    <td>
+      ${reading.getWindSpeed()} km/hr
+    </td>
+    <td>
+      ${reading.getWindDirection()}°
+    </td>
+    <td>
+      ${reading.getPressure()} hPa
+    </td>
+    <td>
+      <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="button is-danger is-center">
+        <i class="fa-solid fa-square-xmark"></i></a>
+    </td>
+  </tr>
+  #{/list}
   </tbody>
 </table>
