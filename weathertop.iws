@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="Final version including commenting and correct formatting">
+    <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="Final version may 20th">
       <change beforePath="$PROJECT_DIR$/app/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weathertop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weathertop.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +132,7 @@
       <workItem from="1684413851427" duration="590000" />
       <workItem from="1684414457558" duration="27128000" />
       <workItem from="1684486964969" duration="43230000" />
-      <workItem from="1684595641005" duration="66000" />
+      <workItem from="1684595641005" duration="753000" />
     </task>
     <task id="LOCAL-00001" summary="Adjustments made after study group may 15th">
       <created>1684192978194</created>
@@ -159,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684508580737</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Final version may 20th">
+      <created>1684595724675</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684595724675</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +180,8 @@
     <MESSAGE value="Tweaks as of may 16th end.&#10;Added date/time, trends and general improvements." />
     <MESSAGE value="Tweaks to may 16th version including alphabetising stations on dashboard." />
     <MESSAGE value="End of initial run of changes May 19th. Large number of aesthetic changes including adding multiple icons, changing login/signup/profile page images, improving the cards by adding footers and more. Am committing this version before I redeploy it." />
-    <option name="LAST_COMMIT_MESSAGE" value="End of initial run of changes May 19th. Large number of aesthetic changes including adding multiple icons, changing login/signup/profile page images, improving the cards by adding footers and more. Am committing this version before I redeploy it." />
+    <MESSAGE value="Final version may 20th" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final version may 20th" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
