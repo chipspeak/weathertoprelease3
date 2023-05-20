@@ -87,7 +87,7 @@ public class Conversions {
     if (temp >= 11 && temp < 20) {
       tempIcon = "fa-solid fa-temperature-half";
     }
-    if (temp >= 21 && temp < 25) {
+    if (temp >= 20 && temp < 25) {
       tempIcon = "fa-solid fa-temperature-three-quarters";
     }
     if (temp > 25) {

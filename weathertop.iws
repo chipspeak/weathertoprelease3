@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b7c012d-60ef-4dbc-b666-92d60588a2e8" name="Default Changelist" comment="Final version may 20th">
-      <change beforePath="$PROJECT_DIR$/app/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utilities/Conversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utilities/Conversions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weathertop.iws" beforeDir="false" afterPath="$PROJECT_DIR$/weathertop.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +127,8 @@
       <workItem from="1684413851427" duration="590000" />
       <workItem from="1684414457558" duration="27128000" />
       <workItem from="1684486964969" duration="43230000" />
-      <workItem from="1684595641005" duration="753000" />
+      <workItem from="1684595641005" duration="1923000" />
+      <workItem from="1684606979503" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="Adjustments made after study group may 15th">
       <created>1684192978194</created>
@@ -169,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684595724675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final version may 20th">
+      <created>1684596414964</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684596414964</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
